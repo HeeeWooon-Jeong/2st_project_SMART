@@ -6,33 +6,73 @@
 
 html {
   height: 100%;
+  margin: 0px;
+  padding: 0;
 }
 
 :root {
-  --card-height: 25vh;
+  --card-height: 45vh;
   --card-width: calc(var(--card-height) / 1.5);
+  z-index: 10;
 }
 
+/* pump 텍스트 */
+.p_text{
+  align-content: center;
+  margin-left: 32%;
+  display: flex;
+}
 
 body {
-
-  min-height: 90vh;
+  min-width: 400px;
+  height: 100%;
   background: #171c2e;
-  display: flex;
+  display: block;
   align-items: center;
   flex-direction: column;
   padding-top: 2rem;
   padding-bottom: 2rem;
   box-sizing: border-box;
-  margin: 50px;
+  margin-top: 0px;
   padding: 0;
   font-family: sans-serif;
 }
 
+#body-content{
+  
+}
+#body-wrapper{
+  height: inherit;
+}
+
+/* 헤더 */
+
+.header{
+  display: flex;
+  align-items: center;
+  padding: 6px;
+  height: 60px;
+  flex-shrink: 0;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #131d3f;
+}
+
+
+/* 풋터 */
+.footer{
+  display: flex;
+  align-items: center;
+  padding: 6px;
+  height: 60px;
+  flex-shrink: 0;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #131d3f;
+}
 
 .card {
-  background: #191c29;
-  width: 100%;
+  margin-top: 0px;
   height: var(--card-height - 10%);
   padding: 1px;
   position: relative;
@@ -55,32 +95,32 @@ body {
 .card:hover:before,
 .card:hover:after {
   content: "";
-  width: 100.6%;
-  height: 100.6%;
+  width: 1928px;
+  height: 1090px;
   border-radius: 18px;
   background-image: linear-gradient(var(--rotate), #761e91, #2074a5 43%, #a11466);
+  --card-height: 35vh;
+  --card-width: calc(var(--card-height) / 1.5);
   position: absolute;
   z-index: -1%;
-  top: -0.3%;
-  left: -0.3%;
+  align-items: center;
   
   
-  animation: spin 3.5s linear infinite;
+  animation: spin 6.5s linear infinite;
 }
 
 
 .card::before {
   content: "";
-  width: 100%;
-  height: 100%;
+  width: 1928px;
+  height: 1090px;
   border-radius: 18px;
   background-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2);
   position: absolute;
-  z-index: -1%;
-  top: 0%;
-  left: 0%;
+  z-index: 1%;
+  align-items: center;
   
-  animation: spin 2.5s linear infinite;
+  animation: spin 11.5s linear infinite;
 }
 
 .card::after {
@@ -130,7 +170,7 @@ a {
   width: 42vh;
   padding: 40px;
   transform: translate(-50%, -50%);
-  background: rgba(5, 6, 15, 0.959);
+  background: rgba(6, 4, 14, 0.911);
   box-sizing: border-box;
   box-shadow: 0 15px 25px rgba(96, 245, 245, 0.411);
   border-radius: 10px;
@@ -314,9 +354,3 @@ a {
 
 
 
-/* 풋터 */
-/*==================== 
-	Footer 
-====================== */
-
-/* Main Footer */
